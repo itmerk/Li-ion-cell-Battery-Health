@@ -48,6 +48,15 @@ Ensure you have the following installed:
 
    ```uvicorn main:app --reload --port 8080 ```
 
+   * main refers to the name of your Python file (without the .py extension).
+   * app is the FastAPI instance within the file.
+   * --reload enables auto-reloading during development.
+   * --port 8080 sets the port to 8080.
+  
+6. Access the Dashboard:
+
+   Open a web browser and navigate to http://localhost:8080 to view the dashboard.
+
 
 
 
