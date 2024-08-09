@@ -46,7 +46,6 @@ Ensure you have the following installed:
 
    Start the FastAPI server using Uvicorn:
 
-    ```bash
    ```uvicorn main:app --reload --port 8080 ```
 
 
