@@ -17,9 +17,9 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
 
 ### Step 1: Clone the Repository
 
-```git clone https://github.com/yourusername/li-ion-cell-dashboard.git```
+```https://github.com/itmerk/Li-ion-cell-Battery-Health.git```
 
-```cd li-ion-cell-dashboard```
+```cd Li-ion-cell-Battery-Health```
 
 ### Step 2: Create and Activate a Virtual Environment
 
