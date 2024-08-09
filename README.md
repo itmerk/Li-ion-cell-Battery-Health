@@ -38,8 +38,7 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
   3. Import your dataset into MySQL. Ensure the tables are named cells, data_5308, and data_5329.
 
 ### Step 5: Update Database Configuration
-  Edit the get_db_connection() function in main.py with your MySQL connection details (host, user, password, and database).
-  
+  Edit the get_db_connection() function in main.py with your MySQL connection details (host, user, password, and database). 
 
   ```
   def get_db_connection():
@@ -49,5 +48,21 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
               password='your_password',
               database='li_ion_cells'
           )
-  return connection```
+  return connection
+```
+### Step 6: Run the Application
+  
+  ```uvicorn main:app --reload --port 8080```
+  
+  This will start the FastAPI server on http://127.0.0.1:8080.
+
+### Step 7: Access the Dashboard
+
+* Open your web browser and navigate to http://127.0.0.1:8000.
+* Explore the different routes:
+    * / - Overview Page
+    * /cell - Cell Dashboard with SoH and Degradation pie charts.
+    * /data_5308 - Detailed visualization for cell 5308.
+    * /data_5329 - Detailed visualization for cell 5329.
+
 
