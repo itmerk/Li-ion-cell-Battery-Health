@@ -53,7 +53,7 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
 ```
 ### Step 6: Run the Application
   
-  ```uvicorn main:app --reload --port 8080```
+  ```uvicorn main_fast:app --reload --port 8080```
   
   This will start the FastAPI server on http://127.0.0.1:8080.
 
