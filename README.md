@@ -1,4 +1,4 @@
-# Li-ion Cell Dashboard
+# Li-ion-cell-Battery-Health
 
 This project is a FastAPI application that serves a dashboard to visualize the State of Health (SoH) and degradation of Li-ion cells using Plotly charts.
 
@@ -15,5 +15,5 @@ Ensure you have the following installed:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/itmerk/your-repository.git
+   git clone https://github.com/itmerk/Li-ion-cell-Battery-Health.git
    cd your-repository
