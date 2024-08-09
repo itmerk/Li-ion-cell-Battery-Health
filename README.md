@@ -23,9 +23,9 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
 
       ```python -m venv venv```
    
-      ```source venv/bin/activate``` # On Windows use `venv\Scripts\activate`
+      ```source venv/bin/activate``` # On Windows use ```venv\Scripts\activate```
 
-3. **Install Dependencies:**
+4. **Install Dependencies:**
 
    Install the required Python packages:
 
@@ -33,7 +33,7 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
 
    You may need to create a requirements.txt file if it does not exist. Here’s an example of what it should include:
 
-4. Set Up the MySQL Database
+5. Set Up the MySQL Database
 
    * Install and set up MySQL Server if not already installed.
    * Create a database named li_ion_cells.
