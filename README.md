@@ -1,22 +1,27 @@
-# Li-ion-cell-Battery-Health
+# Li-ion Cell Dashboard
 
-This project is a FastAPI application that serves a dashboard to visualize the State of Health (SoH) and degradation of Li-ion cells using Plotly charts.
+This project is a FastAPI application that visualizes the State of Health (SoH) and various metrics for Li-ion cells. The data is fetched from a MySQL database and displayed using Plotly visualizations.
 
-## Prerequisites
+## Features
+- **Overview Page:** Introduction and navigation links.
+- **Cell Dashboard:** Dropdown to select and visualize the State of Health for specific cell IDs.
+- **Detailed Data Visualization:** Subplot grids for selected cell data, including voltage, current, temperature gap, and capacity over time.
 
-Ensure you have the following installed:
+## Requirements
 
-- Python 3.7 or higher
+- Python 3.8+
 - MySQL Server
-- Pip (Python package installer)
+- Required Python packages (listed in `requirements.txt`)
 
-## Installation
+## Installation and Setup
 
-1. **Clone the Repository:**
+### Step 1: Clone the Repository
 
-   ```git clone https://github.com/itmerk/Li-ion-cell-Battery-Health.git```
-   
-   ```cd your-repository```
+```bash
+git clone https://github.com/yourusername/li-ion-cell-dashboard.git
+cd li-ion-cell-dashboard
+
+
    
 2. **Create and Activate a Virtual Environment:**
 
@@ -56,6 +61,15 @@ Ensure you have the following installed:
 6. Access the Dashboard:
 
    Open a web browser and navigate to http://localhost:8080 to view the dashboard.
+
+Endpoints
+Overview Page: /
+
+Provides navigation links to various parts of the dashboard.
+Cell Data Page: /cell
+
+Fetches and processes cell data from the database.
+Displays a pie chart of the State of Health and degradation for the specified cell ID.
 
 
 
