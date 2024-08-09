@@ -1,4 +1,4 @@
-# Li-ion Cell Dashboard
+# Li-ion Cell Battery Health
 
 This project is a FastAPI application that visualizes the State of Health (SoH) and various metrics for Li-ion cells. The data is fetched from a MySQL database and displayed using Plotly visualizations.
 
@@ -36,6 +36,7 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
   1. Install and set up MySQL Server if not already installed.
   2. Create a database named li_ion_cells.
   3. Import your dataset into MySQL. Ensure the tables are named cells, data_5308, and data_5329.
+  4. For Data Visualize and step by step process check Data Extract.ipynb file.
 
 ### Step 5: Update Database Configuration
   Edit the get_db_connection() function in main.py with your MySQL connection details (host, user, password, and database). 
