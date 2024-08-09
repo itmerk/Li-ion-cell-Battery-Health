@@ -15,7 +15,7 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
 
 ## Installation and Setup
 
-### Step 1: Clone the Repository
+1: **Clone the Repository**
 
       ```git clone https://github.com/yourusername/li-ion-cell-dashboard.git```
 
