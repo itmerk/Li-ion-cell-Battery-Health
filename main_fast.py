@@ -1,5 +1,7 @@
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse, JSONResponse
+from typing import Annotated
+from fastapi import FastAPI, Depends, HTTPException, status
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from fastapi.responses import HTMLResponse
 import mysql.connector
 import plotly.express as px
 import pandas as pd
@@ -8,8 +10,27 @@ from datetime import datetime
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import plotly.io as pio
+import secrets
 
 app = FastAPI()
+
+security = HTTPBasic()
+
+# Function to verify user credentials
+def verify_credentials(credentials: HTTPBasicCredentials):
+    correct_username = secrets.compare_digest(credentials.username, "admin")
+    correct_password = secrets.compare_digest(credentials.password, "12345")
+    if not (correct_username and correct_password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    return credentials
+
+@app.get("/user")
+def read_current_user(credentials:Annotated[HTTPBasicCredentials,Depends(security)]):
+    return {"Username": credentials.username, "Password": credentials.password}
 
 # Database connection
 def get_db_connection():
@@ -45,7 +66,8 @@ dropdown_template = Template("""
 
 # Overview Page
 @app.get("/", response_class=HTMLResponse)
-def overview():
+def overview(credentials: Annotated[HTTPBasicCredentials, Depends(security)]):
+    verify_credentials(credentials)
     return HTMLResponse(content="""
     <!DOCTYPE html>
     <html>
