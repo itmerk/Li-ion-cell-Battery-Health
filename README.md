@@ -41,7 +41,8 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
   Edit the get_db_connection() function in main.py with your MySQL connection details (host, user, password, and database).
   
 
-  ```def get_db_connection():
+  ```
+  def get_db_connection():
             connection = mysql.connector.connect(
               host='localhost',
               user='root',
