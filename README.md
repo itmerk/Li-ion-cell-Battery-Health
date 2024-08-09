@@ -34,7 +34,7 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
 ### Step 4: Set Up the MySQL Database
 
   1. Install and set up MySQL Server if not already installed.
-  2. Create a database named li_ion_cells.
+  2. Create a database name "database_name".
   3. Import your dataset into MySQL. Ensure the tables are named cells, data_5308, and data_5329.
   4. For Data Visualize and step by step process check Data Extract.ipynb file.
 
@@ -47,7 +47,7 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
               host='localhost',
               user='root',
               password='your_password',
-              database='li_ion_cells'
+              database='database_name'
           )
   return connection
 ```
@@ -59,11 +59,10 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
 
 ### Step 7: Access the Dashboard
 
+* Add authentication to page.
 * Open your web browser and navigate to http://127.0.0.1:8000.
 * Explore the different routes:
     * / - Overview Page
     * /cell - Cell Dashboard with SoH and Degradation pie charts.
     * /data_5308 - Detailed visualization for cell 5308.
     * /data_5329 - Detailed visualization for cell 5329.
-
-
