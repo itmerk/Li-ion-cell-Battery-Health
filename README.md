@@ -59,6 +59,7 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
 
 ### Step 7: Access the Dashboard
 
+* Add Authentication to home page while login.
 * Open your web browser and navigate to http://127.0.0.1:8000.
 * Explore the different routes:
     * / - Overview Page
