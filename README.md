@@ -17,13 +17,10 @@ This project is a FastAPI application that visualizes the State of Health (SoH) 
 
 ### Step 1: Clone the Repository
 
-bash
 ```git clone https://github.com/yourusername/li-ion-cell-dashboard.git```
 
 ```cd li-ion-cell-dashboard```
 
-
-   
 2. **Create and Activate a Virtual Environment:**
 
       ```python -m venv venv```
@@ -38,17 +35,13 @@ bash
 
    You may need to create a requirements.txt file if it does not exist. Here’s an example of what it should include:
 
-   ```fastapi```
-   ```uvicorn```
-   ```mysql-connector-python```
-   ```pandas```
-   ```plotly```
-   ```jinja2```
+4. Set Up the MySQL Database
 
-4. Set Up MySQL Database:
-   Ensure you have MySQL Server running and a database named li_ion_cells created. Update the get_db_connection function in the main.py file if your database credentials or configurations are different.
+   * Install and set up MySQL Server if not already installed.
+   * Create a database named li_ion_cells.
+   * Import your dataset into MySQL. Ensure the tables are named cells, data_5308, and data_5329.
    
-5. Run the FastAPI Application:
+6. Run the FastAPI Application:
 
    Start the FastAPI server using Uvicorn:
 
@@ -59,7 +52,7 @@ bash
    * --reload enables auto-reloading during development.
    * --port 8080 sets the port to 8080.
   
-6. Access the Dashboard:
+7. Access the Dashboard:
 
    Open a web browser and navigate to http://localhost:8080 to view the dashboard.
 
