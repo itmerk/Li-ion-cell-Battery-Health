@@ -17,3 +17,10 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/itmerk/Li-ion-cell-Battery-Health.git
    cd your-repository
+   
+2 .**Create and Activate a Virtual Environment:**
+
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+
